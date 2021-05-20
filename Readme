@@ -1,0 +1,62 @@
+Desarrollar en ANSI C:
+Se necesita gestionar una bicicletería y para eso se deberá desarrollar lo siguiente:
+ENTIDADES:
+
+Servicio:
+● id (comienza en 20000, autoincremental)
+● descripción (máximo 25 caracteres)
+● precio
+
+Trabajo:
+● id (autoincremental)
+● marcaBicicleta (Cadena) Validar
+● rodadoBicicleta
+● idServicio (debe existir) Validar
+● fecha (Validar día, mes y año)
+
+DATOS PREVIOS:
+El array de servicios deberá ser hardcodeado.
+Servicios (Limpieza: $250, Parche: $300, Centrado: $400, Cadena: $350)
+
+MENU DE OPCIONES:
+A. ALTA TRABAJO
+B. MODIFICAR TRABAJO: Se ingresará el id, permitiendo en un submenú modificar:
+● La marca de la bicicleta
+● El servicio
+C. BAJA TRABAJO: Se ingresará el id del trabajo y se realizará una baja lógica.
+D. LISTAR TRABAJOS: Hacer un único listado de todos los trabajos ordenados por año y ante igualdad
+de año por marca de la bicicleta.
+E. LISTAR SERVICIOS
+F. TOTAL en pesos por los servicios prestados.
+
+Parte 2 (Refactorización)
+Para esta instancia del parcial, deberá agregar la siguiente
+estructura y relacionarla de manera adecuada con la/s
+estructura/s de la parte 1. Eliminando de las anteriores los
+campos que sobren.
+Bicileta:
+ id (comienza en 25)
+ marca(máximo 25 caracteres)
+ rodado (int)
+ color (cadena)
+Hardcodear por lo menos 5 bicicletas
+Nota importante. Deberá impactar este cambio en las
+funcionalidades solicitadas en la parte 1 (puntos A-B-C-D).
+
+Parte 3 (Informes)
+Agregar los siguientes informes:
+1. Listado de todos los trabajos ordenados por marca de la bicicleta.
+2. El o los servicios con más trabajos realizados.
+3. Listado de servicios con los datos de las bicicletas que se lo realizaron.
+4. La cantidad de biciletas de color Rojo que realizaron un servicio
+elegido por el usuario.
+
+/* ********************************************************************************************************* */
+NOTAS:
+I. Se deberá desarrollar bibliotecas por cada entidad, las cuales contendrán las funciones Alta, Baja,
+Modificar y Listar.
+II. Las validaciones (input), deberán estar en una biblioteca aparte.
+III. Tener en cuenta que no se podrá ingresar a los casos Modificar, Baja, Listar y Trabajos; sin antes haber
+realizado al menos un Alta (utilizar banderas y/o contadores).
+IV. El código deberá tener comentarios con la documentación de cada una de las funciones y respetar las reglas
+de estilo de la cátedra.
